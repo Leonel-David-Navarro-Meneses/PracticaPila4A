@@ -32,13 +32,7 @@ public class TestingStack {
    }
 
 
-   System.out.println("ver el estado de la pila");
-   if(pila.isFull()){
-    System.out.println("la pila esta llena");
-   }else{
-    System.out.println("la pila no esta llena");
-   }
-
+   
 
 
 
@@ -60,7 +54,29 @@ public class TestingStack {
            }
          }while(respuesta != 'n');
 
-         
+         System.out.println("ver el estado de la pila");
+   if(pila.isFull()){
+    System.out.println("la pila esta llena");
+   }else{
+    System.out.println("la pila no esta llena");
+   }
+
+   //sacar todos los elementos de la pila y imprimrilos
+   while ( !pila.isEmpty()){
+   dato = pila.pop();
+   System.out.println("sacar los elementos de la pila " + dato.getValue());
+   }
+
+   //checar que la pila este vacia
+   System.out.println("----------");
+   System.out.println("ver el estado de la pila");
+   if(pila.isEmpty()){
+    System.out.println("la pila esta VACIA");
+   }else{
+    System.out.println("la pila aun esta vacia");
+   }
+
+
         }
 
 }

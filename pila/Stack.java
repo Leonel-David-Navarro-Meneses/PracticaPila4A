@@ -44,6 +44,7 @@ public class Stack {
         Data unDato = null;
         //si la pila No esta vacia, se puede retirara elementos
           if(this.isEmpty()){
+            System.out.println("sacar elemento [" + top + "]");
             unDato = stack[top];
             this.top++;
           }
