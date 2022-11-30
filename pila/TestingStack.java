@@ -24,11 +24,19 @@ public class TestingStack {
          pila = new Stack(t);
 
          //probar que la pila este vacia
-         System.out.println();
+ System.out.println("ver el estado de la pila");
    if(pila.isEmpty()){
     System.out.println("la pila esta vacia");
    }else{
     System.out.println("la pila tiene elementos");
+   }
+
+
+   System.out.println("ver el estado de la pila");
+   if(pila.isFull()){
+    System.out.println("la pila esta llena");
+   }else{
+    System.out.println("la pila no esta llena");
    }
 
 

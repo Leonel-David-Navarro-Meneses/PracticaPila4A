@@ -3,18 +3,22 @@ package pila;
 import java.util.ArrayList;
 
 public class Stack {
-    private ArrayList<Data> stack;
+    private Data[] stack;
     private int top;
+    
 
     //crea una pila con espacio para t Data
     public Stack(int t){
-        stack = new ArrayList(t);
-        top = stack.size();
+        stack = new Data[t];
+        top = t;
+        
+        System.out.println("el valor de top es: " + this.top);
+        System.out.println("tamaño de la pila: " + stack.length);
     
     }
 //regresa true si la pila esta vacia
     public boolean isEmpty(){
-        if(top == stack.size())
+        if(top == stack.length)
         return true;
         else
         return false;
@@ -31,7 +35,8 @@ public class Stack {
          if(this.isFull())//la pila esta llena y no se puede insertar mas datos
          return false;
          this.top--;
-         stack.add(top, d);
+         stack[top] = d;
+         System.out.println("valor de top:" + this.top);
          return true;
     }
 //saca un elemento de la pila
@@ -39,7 +44,7 @@ public class Stack {
         Data unDato = null;
         //si la pila No esta vacia, se puede retirara elementos
           if(this.isEmpty()){
-            unDato = stack.remove(this.top);
+            unDato = stack[top];
             this.top++;
           }
           return unDato;
@@ -47,7 +52,7 @@ public class Stack {
 //regresa el numero de elementos que estan en la pila
 
 public int getSize(){
-    return this.stack.size();
+    return this.stack.length;
 }
 
 }
